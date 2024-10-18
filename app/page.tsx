@@ -1,4 +1,4 @@
-import { Container, Filters, Title, TopBar } from "@/components/shared";
+import { Container, Filters, ProductCard, ProductsGroupList, Title, TopBar } from "@/components/shared";
 
 export default function Home() {
   return <>
@@ -10,7 +10,7 @@ export default function Home() {
     <TopBar/>
 
     <Container className="mt-10 pb-14">
-        <div className="flex gap-[60px]">
+        <div className="flex gap-[80px]">
           {/* Фильтрация */}
           <div className="w-[250px]">
             <Filters />
@@ -19,9 +19,162 @@ export default function Home() {
           {/* Список товаров */}
           <div className="flex-1">
             <div className="flex flex-col gap-16">
-              Список товаров
-              {/* <ProductsGroupList title="Пиццы" items={[1, 2, 3, 4, 5]} />
-              <ProductsGroupList title="Комбо" items={[1, 2, 3, 4, 5]} /> */}
+              <ProductsGroupList 
+                title="Пиццы" 
+                items={[
+                  {
+                    id: 1,
+                    name: "Маргарита",
+                    imageUrl: "https://media.dodostatic.net/image/r:292x292/11EE7D610BBEB562BD4D48786AD87270.webp",
+                    items: [{price: 550}],
+                  },
+                  {
+                    id: 2,
+                    name: "Маргарита",
+                    imageUrl: "https://media.dodostatic.net/image/r:292x292/11EE7D610BBEB562BD4D48786AD87270.webp",
+                    items: [{price: 550}],
+                  },
+                  {
+                    id: 3,
+                    name: "Маргарита",
+                    imageUrl: "https://media.dodostatic.net/image/r:292x292/11EE7D610BBEB562BD4D48786AD87270.webp",
+                    items: [{price: 550}],
+                  },
+                  {
+                    id: 4,
+                    name: "Маргарита",
+                    imageUrl: "https://media.dodostatic.net/image/r:292x292/11EE7D610BBEB562BD4D48786AD87270.webp",
+                    items: [{price: 550}],
+                  },
+                  {
+                    id: 5,
+                    name: "Маргарита",
+                    imageUrl: "https://media.dodostatic.net/image/r:292x292/11EE7D610BBEB562BD4D48786AD87270.webp",
+                    items: [{price: 550}],
+                  },
+                  {
+                    id: 6,
+                    name: "Маргарита",
+                    imageUrl: "https://media.dodostatic.net/image/r:292x292/11EE7D610BBEB562BD4D48786AD87270.webp",
+                    items: [{price: 550}],
+                  },
+                  {
+                    id: 7,
+                    name: "Маргарита",
+                    imageUrl: "https://media.dodostatic.net/image/r:292x292/11EE7D610BBEB562BD4D48786AD87270.webp",
+                    items: [{price: 550}],
+                  },
+                  {
+                    id: 8,
+                    name: "Маргарита",
+                    imageUrl: "https://media.dodostatic.net/image/r:292x292/11EE7D610BBEB562BD4D48786AD87270.webp",
+                    items: [{price: 550}],
+                  },
+                  {
+                    id: 9,
+                    name: "Маргарита",
+                    imageUrl: "https://media.dodostatic.net/image/r:292x292/11EE7D610BBEB562BD4D48786AD87270.webp",
+                    items: [{price: 550}],
+                  },
+                  {
+                    id: 10,
+                    name: "Маргарита",
+                    imageUrl: "https://media.dodostatic.net/image/r:292x292/11EE7D610BBEB562BD4D48786AD87270.webp",
+                    items: [{price: 550}],
+                  },
+                  {
+                    id: 11,
+                    name: "Маргарита",
+                    imageUrl: "https://media.dodostatic.net/image/r:292x292/11EE7D610BBEB562BD4D48786AD87270.webp",
+                    items: [{price: 550}],
+                  },
+                  {
+                    id: 12,
+                    name: "Маргарита",
+                    imageUrl: "https://media.dodostatic.net/image/r:292x292/11EE7D610BBEB562BD4D48786AD87270.webp",
+                    items: [{price: 550}],
+                  }
+                ]} 
+                categoryId={1} 
+              />
+              <ProductsGroupList 
+                title="Комбо" 
+                items={[
+                  {
+                    id: 1,
+                    name: "Маргарита",
+                    imageUrl: "https://media.dodostatic.net/image/r:292x292/11EE7D610BBEB562BD4D48786AD87270.webp",
+                    items: [{price: 550}],
+                  },
+                  {
+                    id: 2,
+                    name: "Маргарита",
+                    imageUrl: "https://media.dodostatic.net/image/r:292x292/11EE7D610BBEB562BD4D48786AD87270.webp",
+                    items: [{price: 550}],
+                  },
+                  {
+                    id: 3,
+                    name: "Маргарита",
+                    imageUrl: "https://media.dodostatic.net/image/r:292x292/11EE7D610BBEB562BD4D48786AD87270.webp",
+                    items: [{price: 550}],
+                  },
+                  {
+                    id: 4,
+                    name: "Маргарита",
+                    imageUrl: "https://media.dodostatic.net/image/r:292x292/11EE7D610BBEB562BD4D48786AD87270.webp",
+                    items: [{price: 550}],
+                  },
+                  {
+                    id: 5,
+                    name: "Маргарита",
+                    imageUrl: "https://media.dodostatic.net/image/r:292x292/11EE7D610BBEB562BD4D48786AD87270.webp",
+                    items: [{price: 550}],
+                  },
+                  {
+                    id: 6,
+                    name: "Маргарита",
+                    imageUrl: "https://media.dodostatic.net/image/r:292x292/11EE7D610BBEB562BD4D48786AD87270.webp",
+                    items: [{price: 550}],
+                  },
+                  {
+                    id: 7,
+                    name: "Маргарита",
+                    imageUrl: "https://media.dodostatic.net/image/r:292x292/11EE7D610BBEB562BD4D48786AD87270.webp",
+                    items: [{price: 550}],
+                  },
+                  {
+                    id: 8,
+                    name: "Маргарита",
+                    imageUrl: "https://media.dodostatic.net/image/r:292x292/11EE7D610BBEB562BD4D48786AD87270.webp",
+                    items: [{price: 550}],
+                  },
+                  {
+                    id: 9,
+                    name: "Маргарита",
+                    imageUrl: "https://media.dodostatic.net/image/r:292x292/11EE7D610BBEB562BD4D48786AD87270.webp",
+                    items: [{price: 550}],
+                  },
+                  {
+                    id: 10,
+                    name: "Маргарита",
+                    imageUrl: "https://media.dodostatic.net/image/r:292x292/11EE7D610BBEB562BD4D48786AD87270.webp",
+                    items: [{price: 550}],
+                  },
+                  {
+                    id: 11,
+                    name: "Маргарита",
+                    imageUrl: "https://media.dodostatic.net/image/r:292x292/11EE7D610BBEB562BD4D48786AD87270.webp",
+                    items: [{price: 550}],
+                  },
+                  {
+                    id: 12,
+                    name: "Маргарита",
+                    imageUrl: "https://media.dodostatic.net/image/r:292x292/11EE7D610BBEB562BD4D48786AD87270.webp",
+                    items: [{price: 550}],
+                  }
+                ]} 
+                categoryId={2}
+              />
             </div>
 
             <div className="flex items-center gap-6 mt-12">
